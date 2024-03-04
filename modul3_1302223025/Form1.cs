@@ -12,8 +12,7 @@ namespace modul3_1302223025
 {
     public partial class Form1 : Form
     {
-        public int num1, num2, hasil;
-
+        public int num1, num2,temp, hasil;
         public Form1()
         {
             InitializeComponent();
@@ -92,16 +91,18 @@ namespace modul3_1302223025
 
         private void button2_Click(object sender, EventArgs e)
         {
-            num2 = Convert.ToInt32(textBox1.Text);
+            temp = 0;
+            num2 = 0;
             hasil = num1 + num2;
             textBox1.Text = Convert.ToString(hasil);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            num1 = Convert.ToInt32(textBox1.Text);
+            temp = 0;
+            temp = Convert.ToInt32(textBox1.Text);
+            num1 += temp;
             textBox1.Clear();
-
         }
     }
 }
